@@ -45,11 +45,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 var userDataArray = [];
 
 var user1 = {};
-user1['attr1'] = '3';
-user1['attr2'] = '1';
-user1['attr3'] = '4';
-user1['attr4'] = '1';
-user1['attr5'] = '5';
+user1['attr1'] = '86';
+user1['attr2'] = '79';
+user1['attr3'] = '90';
+user1['attr4'] = '70';
+user1['attr5'] = '100';
 user1['applied'] = false;
 user1['gender'] = "Male";
 user1['cgpa'] = 3.75;
@@ -61,11 +61,11 @@ user1['entryYear'] = 2019;
 userDataArray.push(user1);
 
 var user2 = {};	
-user2['attr1'] = '2';
-user2['attr2'] = '6';
-user2['attr3'] = '8';
-user2['attr4'] = '3';
-user2['attr5'] = '1';
+user2['attr1'] = '60';
+user2['attr2'] = '80';
+user2['attr3'] = '74';
+user2['attr4'] = '57';
+user2['attr5'] = '100';
 user2['applied'] = false;
 user2['gender'] = "Female";
 user2['cgpa'] = 3.85;
@@ -77,11 +77,11 @@ user2['entryYear'] = 2018;
 userDataArray.push(user2);
 
 var user3 = {};	
-user3['attr1'] = '5';
-user3['attr2'] = '2';
-user3['attr3'] = '6';
-user3['attr4'] = '1';
-user3['attr5'] = '1';
+user3['attr1'] = '92';
+user3['attr2'] = '88';
+user3['attr3'] = '79';
+user3['attr4'] = '85';
+user3['attr5'] = '100';
 user3['applied'] = false;
 user3['gender'] = "Female";
 user3['cgpa'] = 3.20;
@@ -162,7 +162,11 @@ app.get('/editProfile', function(req, res, next){
 		gender : user['gender'],
 		email : user['email'],
 		entryYear : user['entryYear'],
-		cgpa : user['cgpa']
+		cgpa : user['cgpa'],
+		attr1 : user['attr1'],
+		attr2 : user['attr2'],
+		attr3 : user['attr3'],
+		attr4 : user['attr4']
 	});
 });
 
@@ -174,6 +178,10 @@ app.get('/saveProfile', function(req, res, next){
 	var email = req.query.Email;
 	var entryYear = req.query.entry_year;
 	var cgpa = req.query.cgpa;
+	var attr1 = req.query.attr1;
+	var attr2 = req.query.attr2;
+	var attr3 = req.query.attr3;
+	var attr4 = req.query.attr4;
 
 	console.log(option);
 	console.log(firstName);
@@ -182,6 +190,10 @@ app.get('/saveProfile', function(req, res, next){
 	console.log(email);
 	console.log(entryYear);
 	console.log(cgpa);
+	console.log(attr1);
+	console.log(attr2);
+	console.log(attr3);
+	console.log(attr4);
 
 	userDataArray[option - 1]['firstName'] = firstName;
 	userDataArray[option - 1]['lastName'] = lastName;
@@ -189,6 +201,10 @@ app.get('/saveProfile', function(req, res, next){
 	userDataArray[option - 1]['email'] = email;
 	userDataArray[option - 1]['entryYear'] = entryYear;
 	userDataArray[option - 1]['cgpa'] = cgpa;
+	userDataArray[option - 1]['attr1'] = attr1;
+	userDataArray[option - 1]['attr2'] = attr2;
+	userDataArray[option - 1]['attr3'] = attr3;
+	userDataArray[option - 1]['attr4'] = attr4;
 
 	res.redirect('apply');
 })
