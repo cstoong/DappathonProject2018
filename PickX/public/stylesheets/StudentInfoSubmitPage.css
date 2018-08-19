@@ -1,0 +1,56 @@
+.alert-callout-border.success strong {
+  color: #3adb76;
+}
+
+#Submit_Info_Page_Picture {
+
+  width: 100%;
+  padding: 10%;
+ 
+}
+
+#Submit_Info_Page_Picture .student_info_page {
+  margin-left: 50px;
+  max-width: 500px;
+  width: 100%;
+  background-color: rgba(54, 54, 54, 0.5);
+  padding: 20px;
+  color: #fefefe;
+}
+
+.student_info_page .columns.row {
+  display: block;
+}
+
+.gender_radios label input {
+  padding-right: 200px;
+}
+
+.info_title {
+  color: #fefefe;
+}
+
+.student_info_page h3, .translucent-form-overlay label {
+  color: #fefefe;
+}
+
+.student_info_page input, .translucent-form-overlay select {
+  color: #8a8a8a;
+}
+
+.student_info_page input::-webkit-input-placeholder {
+  color: #8a8a8a;
+}
+
+.student_info_page input:-ms-input-placeholder {
+  color: #8a8a8a;
+}
+
+.student_info_page input::placeholder {
+  color: #8a8a8a;
+}
+
+button.save_button {
+  font-style: italic;
+}
+

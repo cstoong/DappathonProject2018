@@ -1,0 +1,6 @@
+{
+    "provider" : "http://127.0.0.1:7545",
+    "contract" : {
+        "address" : "0x9b0867D6b226190bbF63a24c67BBba11b404DBfD"
+    }
+}

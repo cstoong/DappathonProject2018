@@ -1,0 +1,245 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PickX - Transparent Academic Application Portal</title>
+  <link rel="stylesheet" href="/stylesheets/foundation.css">
+  <link rel="stylesheet" href="/stylesheets/app.css">
+  
+  <nav class="scrollhide-nav">
+    <div class="top-bar">
+      <div class="top-bar-left" style="margin-left:5%;">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li><a href="/"><img class="orbit-image" src="/images/logo.png" style="width:150px; height:80px"></a></li>
+          <li style="padding-top:3%">
+            <a href="#" style="color: #FFFFFF;">Categories</a>
+            <ul class="menu vertical">
+              <li><a href="#" style="color: #FFFFFF;">College</a></li>
+              <li><a href="/listUniversity" style="color: #FFFFFF;">Undergraduates</a></li>
+              <li><a href="#" style="color: #FFFFFF;">Postgraduate Courses</a></li>
+            </ul>
+          </li>
+          <li style="padding-top:3%"><a href="#" style="color: #FFFFFF;">About Us</a></li>
+          <li style="padding-top:3%"><a href="#" style="color: #FFFFFF;">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="top-bar-right" style="margin-right:10%;">
+        <ul class="menu">
+          <li><input type="search" placeholder="Search"></li>
+          <form action="/showApplications">
+            <li><button type="submit" class="button">Search</button></li>
+          </form>
+          <li><button type="button" class="button" style="margin-left:10%; width:100%">Sign Out</button></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+</head>
+<body>
+  <br>
+  <article class="grid-container" style="margin-top:7%;">
+    <div class="grid-x grid-margin-x">
+      <div class="medium-6 cell">
+        <img class="thumbnail" src="/images/uni.jpg">
+        <div class="grid-x grid-padding-x small-up-4">
+          <div class="cell">
+            <img src="/images/uni2.jpg">
+          </div>
+          <div class="cell">
+            <img src="/images/uni3.jpg">
+          </div>
+          <div class="cell">
+            <img src="/images/uni4.jpg">
+          </div>
+          <div class="cell">
+            <img src="/images/uni5.jpg">
+          </div>
+        </div>
+      </div>
+      <div class="medium-6 large-5 cell large-offset-1">
+        <h3>Blocklime University of Technology</h3>
+        <p>Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in.</p>
+
+        <div class="grid-x">
+          <div class="cell large-8">
+            <label>Academic Profile
+              <select id="applyOption">
+                <option value=1>Profile User Saved 1</option>
+                <option value=2>Profile User Saved 2</option>
+                <option value=3>Profile User Saved 3</option>
+              </select>
+
+            </label>
+          </div>
+          <div class="cell large-4">
+            <a href="editProfile?option=1" id="editButton" class="success button" style="margin-top:15%; margin-left: 20%; width:80%;">Edit Profile</a>
+          </div>
+        </div>
+
+        <form action="/applyUniversity">
+          <input type = "hidden" name="option" id="hiddenApplyOption" value=1/>
+          <button type = "submit" class="button large expanded" >Apply Now</button>
+        </form>
+        <div class="small secondary expanded button-group">
+          <a class="button">Facebook</a>
+          <a class="button">Twitter</a>
+          <a href = "/showApplications" class="button">Results</a>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="">
+      <hr>
+      <ul class="tabs" data-tabs id="example-tabs">
+        <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Reviews</a></li>
+        <li class="tabs-title"><a href="#panel2">Similar Products</a></li>
+      </ul>
+      <div class="tabs-content" data-tabs-content="example-tabs">
+        <div class="tabs-panel is-active" id="panel1">
+          <h4>Reviews</h4>
+          <div class="media-object stack-for-small">
+            <div class="media-object-section">
+              <img class="thumbnail" src="/images/human1.jpg">
+            </div>
+            <div class="media-object-section">
+              <h5>Mike Stevenson</h5>
+              <p>I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you.</p>
+            </div>
+          </div>
+          <div class="media-object stack-for-small">
+            <div class="media-object-section">
+              <img class="thumbnail" src="/images/human2.jpg">
+            </div>
+            <div class="media-object-section">
+              <h5>Mike Stevenson</h5>
+              <p>I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you</p>
+            </div>
+          </div>
+          <div class="media-object stack-for-small">
+            <div class="media-object-section">
+              <img class="thumbnail" src="/images/human3.jpg">
+            </div>
+            <div class="media-object-section">
+              <h5>Mike Stevenson</h5>
+              <p>I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you</p>
+            </div>
+          </div>
+          <label>
+            My Review
+            <textarea placeholder="None"></textarea>
+          </label>
+          <button class="button">Submit Review</button>
+        </div>
+        <div class="tabs-panel" id="panel2">
+          <div class="grid-x grid-margin-x medium-up-3 large-up-5">
+            <div class="cell">
+              <img class="thumbnail" src="https://placehold.it/350x200">
+              <h5>Other Product <small>$22</small></h5>
+              <p>In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam.</p>
+              <a href="#" class="button hollow tiny expanded">Buy Now</a>
+            </div>
+            <div class="cell">
+              <img class="thumbnail" src="https://placehold.it/350x200">
+              <h5>Other Product <small>$22</small></h5>
+              <p>In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam.</p>
+              <a href="#" class="button hollow tiny expanded">Buy Now</a>
+            </div>
+            <div class="cell">
+              <img class="thumbnail" src="https://placehold.it/350x200">
+              <h5>Other Product <small>$22</small></h5>
+              <p>In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam.</p>
+              <a href="#" class="button hollow tiny expanded">Buy Now</a>
+            </div>
+            <div class="cell">
+              <img class="thumbnail" src="https://placehold.it/350x200">
+              <h5>Other Product <small>$22</small></h5>
+              <p>In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam.</p>
+              <a href="#" class="button hollow tiny expanded">Buy Now</a>
+            </div>
+            <div class="cell">
+              <img class="thumbnail" src="https://placehold.it/350x200">
+              <h5>Other Product <small>$22</small></h5>
+              <p>In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam.</p>
+              <a href="#" class="button hollow tiny expanded">Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+  </div>
+</article>
+</body>
+
+<div class="three-column-footer-contact-form-container">
+  <footer class="three-column-footer-contact-form" data-equalizer data-equalize-by-row="true">
+    <div class="footer-left" data-equalizer-watch>
+      <div class="baseline">
+        <div class="contact-details">
+          <h6>Contact details</h6>
+          <p><i class="fa fa-phone fa-lg" aria-hidden="true"></i> 01234 567890</p>
+          <p><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i> Contact us</a></p>
+          <p><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i> Street, City, County, Country</p>
+        </div>
+        <div class="newsletter">
+          <div class="input-group">
+            <h8>Sign up for our newsletter</h8>
+
+            <input class="input-group-field" type="email" placeholder="Email address" style="margin-bottom:5%;">
+          </div>
+          <a class="button expanded" href="#" style="background-color:#6495ED">Submit</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-center" data-equalizer-watch>
+      <div class="baseline">
+        <div class="newsletter">
+          <h6>Contact form</h6>
+          <div>
+            <input class="input-group-field" type="text" placeholder="Name" style="margin-bottom:2%;">
+            <input class="input-group-field" type="email" placeholder="Email address" style="margin-bottom:2%;">
+            <textarea placeholder="Message" style="margin-bottom:2%;"></textarea>
+          </div>
+          <a class="button expanded" href="#" style="background-color:#6495ED">Submit</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-right" data-equalizer-watch>
+      <div class="baseline">
+        <img class="thumbnail" src="/images/filler.jpg">
+        <h6>Opening times</h6>
+        <p>Mon - Fri 9:00am - 5:00pm</p>
+        <p>Sat 9:00am - 8:00pm</p>
+        <p>Sun 9:00am - 4:00pm</p>
+        <div class="social">
+          <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+          <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+          <i class="fa fa-google-plus-square fa-2x" aria-hidden="true"></i>
+          <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="/javascripts/vendor/jquery.js"></script>
+<script src="/javascripts/vendor/what-input.js"></script>
+<script src="/javascripts/vendor/foundation.js"></script>
+<script src="/javascripts/app.js"></script>
+<script>
+    $(document).ready(function(){
+      $('#hiddenApplyOption').val($('#applyOption').val());
+      $('#editButton').val($('#applyOption').val());
+
+      $('#applyOption').click(function(){
+        $('#hiddenApplyOption').val($(this).val());
+        $("#editButton").attr("href", "editProfile?option=" + $(this).val());
+      })
+    });
+</script>
+</html>

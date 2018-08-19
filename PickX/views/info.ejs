@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PickX - Update Your Information</title>
+  <link rel="stylesheet" href="/stylesheets/foundation.css">
+  <link rel="stylesheet" href="/stylesheets/app.css">
+  <link rel="stylesheet" href="/stylesheets/StudentInfoSubmitPage.css">
+
+  <nav class="scrollhide-nav">
+    <div class="top-bar">
+      <div class="top-bar-left" style="margin-left:5%;">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li><a href="/"><img class="orbit-image" src="/images/logo.png" style="width:150px; height:80px"></a></li>
+          <li style="padding-top:3%">
+            <a href="#" style="color: #FFFFFF;">Categories</a>
+            <ul class="menu vertical">
+              <li><a href="#" style="color: #FFFFFF;">College</a></li>
+              <li><a href="/listUniversity" style="color: #FFFFFF;">Undergraduates</a></li>
+              <li><a href="#" style="color: #FFFFFF;">Postgraduate Courses</a></li>
+            </ul>
+          </li>
+          <li style="padding-top:3%"><a href="#" style="color: #FFFFFF;">About Us</a></li>
+          <li style="padding-top:3%"><a href="#" style="color: #FFFFFF;">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="top-bar-right" style="margin-right:10%;">
+        <ul class="menu">
+          <li><input type="search" placeholder="Search"></li>
+          <form action="/showApplications">
+	          <li><button type="submit" class="button">Search</button></li>
+		      </form>
+          <li><button type="button" class="button" style="margin-left:10%; width:100%">Sign Out</button></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</head>
+
+<body>
+<!-- <div data-closable class="callout alert-callout-border success">
+  <strong>Yay!</strong> - You accomplished a simple task!
+  <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div> -->
+
+  <!-- Student info background image -->
+<div id= "Submit_Info_Page_Picture" class="Submit_Info_Page_Picture" style = "background: url(/images/landscape.jpg) 0 0 no-repeat;">
+
+<!-- Student Info Translucent Page -->
+  <div class="student_info_page">
+  <form action="/saveProfile">
+    <h3>
+      <b>Student Info</b>
+    </h3>
+    <input type="hidden" value="<%=option%>" name="option"/>
+    <div class="row">
+      <label class="columns small-12 info_title">
+        <h6>Name</h6>
+      </label>
+      <div class="columns small-6">
+        <input type="text" name="Firstname" placeholder="First name" value="<%= firstName%>">
+      </div>
+      <div class="columns small-6">
+        <input type="text" name="Lastname" placeholder="Last name" value="<%= lastName%>">
+      </div>
+    </div>
+    
+    <div class="row  gender_select">
+      <label class="info_title">
+        <h6>Gender</h6>
+        <input type="hidden" id="genderHidden" value="<%= gender%>"/>
+         <select name="gender" type="text" id="genderDropdown">
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="row columns">
+      <label class="info_title">
+        <h6>Email</h6>
+        <input type="text" name="Email" placeholder="email@abcd.com" value="<%= email%>">
+      </label>
+    </div>
+   <div class="row columns entry_year">
+      <label class="info_title">
+        <h6>Entry Year</h6>
+        <input type="text" name="entry_year" placeholder="2018" value="<%= entryYear%>">
+      </label>
+    </div>
+    <div class="row columns preferred_course">
+      <label class="info_title">
+        <h6>CGPA</h6>
+        <input type="text" name="cgpa" placeholder="3.7" value="<%= cgpa%>">
+      </label>
+    </div>
+    
+    <button type="submit" class="primary button expanded save_button">
+      <b>Save</b>
+    </button>
+ </form>
+</div>
+</div>
+
+
+<!-- Footer -->
+<div class="three-column-footer-contact-form-container">
+  <footer class="three-column-footer-contact-form" data-equalizer data-equalize-by-row="true">
+    <div class="footer-left" data-equalizer-watch>
+      <div class="baseline">
+        <div class="contact-details">
+          <h6>Contact details</h6>
+          <p><i class="fa fa-phone fa-lg" aria-hidden="true"></i> 01234 567890</p>
+          <p><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i> Contact us</a></p>
+          <p><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i> Street, City, County, Country</p>
+        </div>
+        <div class="newsletter">
+          <div class="input-group">
+            <h8>Sign up for our newsletter</h8>
+
+            <input class="input-group-field" type="email" placeholder="Email address" style="margin-bottom:5%;">
+          </div>
+          <a class="button expanded" href="#" style="background-color:#6495ED">Submit</a>
+        </div>
+      </div>
+     </div>
+    <div class="footer-center" data-equalizer-watch>
+      <div class="baseline">
+        <div class="newsletter">
+          <h6>Contact form</h6>
+          <div>
+            <input class="input-group-field" type="text" placeholder="Name">
+            <input class="input-group-field" type="email" placeholder="Email address">
+            <textarea placeholder="Message"></textarea>
+          </div>
+          <a class="button expanded" href="#" style="background-color:#6495ED">Submit</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-right" data-equalizer-watch>
+      <div class="baseline">
+        <img class="thumbnail" src="http://placehold.it/100">
+        <h6>Opening times</h6>
+        <p>Mon - Fri 9:00am - 5:00pm</p>
+        <p>Sat 9:00am - 8:00pm</p>
+        <p>Sun 9:00am - 4:00pm</p>
+        <div class="social">
+          <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+          <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+          <i class="fa fa-google-plus-square fa-2x" aria-hidden="true"></i>
+          <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+
+<script src="/javascripts/vendor/jquery.js"></script>
+<script src="/javascripts/vendor/what-input.js"></script>
+<script src="/javascripts/vendor/foundation.js"></script>
+<script src="/javascripts/app.js"></script>
+<script>
+	$(document).ready(function(){
+		$('#genderDropdown').val($('#genderHidden').val());
+	});
+</script>
+</html>
